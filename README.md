@@ -5,4 +5,4 @@ Group repository for the Syntax Error Scallywags.
 Workout Website.
 
 # Link for Project Site: 
-https://github.com/AdrianCCollier/Project-Site/blob/main/index.html
+https://github.com/AdrianCCollier/Project-Site/blob/main/index.html 
