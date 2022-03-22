@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Generator</title>
+	<style>
+	.center{ text-align: center; }
+	</style>
+	
+	<script>
+		
+		var count = 30; 
+		var counter = setInterval(timer, 1000); 
+		
+		function timer() { 
+			if( count == 0 ) { 
+				document.getElementById("timer").innerHTML = "Finished!";
+				clearInterval(counter)
+				return; 
+			}
+			document.getElementById("timer").innerHTML=count + " seconds"; 
+			count--;
+		} 
+		
+		function showAlert() { 
+			alert("Your next workout is: curl (placeholder) \n Press OK when ready to begin.");
+		} 
+		
+    </script>
+	
+</head>
+<body onload = "showAlert()">
+	<div class = "center">
+		<h1> Your current workout is: curl <i> (placeholder) </i> </h1>
+		<h1> Time Left: </h1>
+		<span style = "font-size: 60.0pt" id = "timer"></span>
+		</br>
+		</br>
+		<h1> Example: <h1>
+		<img src = "curl.gif" >
+		<br>
+		<button onclick = "document.location.reload(true)" > Next Set </button>
+	</div>
+
+</body>
+</html>
