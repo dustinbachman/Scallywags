@@ -33,4 +33,37 @@ Constraints: none
 Effort Estimation: 6 person-hours
 
 Acceptance Test: Given a list of equipment available, generate a new workout based around those pieces of equipment and the other options that the user has inputted, such as number of sets and which muscles will be worked out.
+
+
+1.4: Tutorial Feature 
+As a user, I want to make sure that I am performing a workout correctly.
+Elaboration: Users should see a small tutorial to make sure that they are performing the workout correctly. If a user is performing a workout incorrectly, it could damage their muscles instead of helping to strengthen them.
+
+Constraints: Finding tutorials that aren't copyrighted(?) or making tutorials.
+
+Effort Estimation: 3 person-hours. 
+
+Acceptance Test: For every workout that is possible to get on the site, there is a small tutorial that teaches the user the correct way to perform that workout. 
+
+
+1.5: Timer 
+As a user, I want to be able to keep track of my time spent doing each set. 
+Elaboration: The user should be told how long to do each set and they should be displayed a timer which helps them keep track of how long they've spent on a set and how much longer they have to go. 
+
+Constraints: None
+
+Effort Estimation: 4 person-hours
+
+Acceptance Test: Each workout given to the user should come with a timer that they can watch to see how long they still have to go in their current set. 
+
+1.6: Workout Increase
+As a user, I want to be able to get stronger at my own speed. 
+Elaboration: Users should be able to rate how easy their workout was after each workout and the app would then decide whether or not they need to increase their amount of reps or weight next time.
+
+Constraints: None 
+
+Effort Estimation: 6 person-hours
+
+Acceptance Test: A user should be able to tell the app how difficult they last workout was and the app should make the decision on whether or not to change their workout next time.
+
 >>>>>>> Stashed changes
