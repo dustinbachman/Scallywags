@@ -66,4 +66,13 @@ Effort Estimation: 6 person-hours
 
 Acceptance Test: A user should be able to tell the app how difficult they last workout was and the app should make the decision on whether or not to change their workout next time.
 
+1.7: Different types of Workout
+As a user, I want to be able to do different workouts without it being reptitive and can target different muscle groups of my body. That way I don't have to look up different workouts for arm day, leg day, chest day, etc. and not have it be the same thing and stale out after a while. 
+
+Elaboration: The users should be able to use the website as a reliable source to get different workouts so they can feel motivated to continue on this pattern in their lives. So, a database would be needed to account different workout plans containing different exeercises. 
+
+Constraints: Accessing a server to manage 
+
+Effort Estimation: 8 person-hours
+
 >>>>>>> Stashed changes
