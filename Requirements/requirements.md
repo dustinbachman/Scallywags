@@ -16,8 +16,7 @@ Requirements Specification for Syntax Error Scallywags
 Any external references needed to understand your project documents. Use URL links if possible.
 
 2. General Description of Product
-This section contains a longer but not exhaustive description of your product.
-A general description of our product is that'll contain a calendar, reminder, and a database structure of workouts so people can have a free of use service to feel welcomed to working out and can be a user friendly service for people especially for beginners. 
+* A general description of our product is that'll contain a calendar, reminder, and a database structure of workouts so people can have a free of use service to feel welcomed to working out and can be a user friendly service for people especially for beginners. 
 
 2.1 Context of Product
 The environment our website will be in is the health and gym environment for people who want to get into shape or start on a new hobby.  
@@ -43,6 +42,7 @@ In a standard requirements document, you would have a LONG list of functional re
 4. System and Non-functional Requirements
 4.1 External Interface Requirements (User,Hardware,Software,Communications)
 Describe what kinds of interfaces your product has, and what they do. Then list specific requirements using item numbers as NF.4.1.X.
+4.1.1 - 
 
 4.2 Performance Requirements
 Describe your product's performance needs. Then list specific requirements using item numbers as NF.4.2.X.
