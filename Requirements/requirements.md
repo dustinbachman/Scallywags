@@ -26,6 +26,10 @@ Display and describe your domain model.
 <div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embeddedchart/25287a3b-e23e-40ec-85fd-a01c0c99849a" id="fw64g9wYo-Ug"></iframe></div>
 https://lucid.app/documents/embeddedchart/25287a3b-e23e-40ec-85fd-a01c0c99849a?invitationId=inv_cfb0b3a8-f2d9-436f-ae97-e384a87addfb#
 
+* Our domain model will has 6 classes which are the regristration page, user page (LandingPage), Administrator, Database, CalendarFeature, and Reminder.
+* The Administrator will have control of the database and userpage
+* While the UserPage will correlate with the regristration page
+* Lastly, the Reminder and calendarFeature are connected with each other and ultimaley connect to the userPage which is the landing page of the user
 
 2.3 Product Functions (general)
 Basic overview of the capabilities of your product. This is not your list of functional requirements, but an overview. Part of your problem statement might be good here.
