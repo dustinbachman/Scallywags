@@ -23,12 +23,15 @@ The environment our website will be in is the health and gym environment for peo
 
 2.2 Domain Model with Description
 Display and describe your domain model.
+<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embeddedchart/25287a3b-e23e-40ec-85fd-a01c0c99849a" id="fw64g9wYo-Ug"></iframe></div>
+
 
 2.3 Product Functions (general)
 Basic overview of the capabilities of your product. This is not your list of functional requirements, but an overview. Part of your problem statement might be good here.
 
 2.4 User Characteristics and Expectations
 Describe your users and their abilities.
+* Users will be able to set 
 
 2.5 Constraints
 Describe any constraints on your system.
@@ -57,6 +60,7 @@ NF.4.3.1 - An external requirement would a small server to hold the database asp
 
 4.4 Quality Requirements
 What quality expectations do your users have? Is your system life-critical? Describe such issues, then list specific requirements using item numbers as NF.4.4.X.
+
 
 
 4.5 Other Requirements
