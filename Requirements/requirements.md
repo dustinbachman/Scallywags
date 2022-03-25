@@ -66,7 +66,7 @@ NF.4.2.2 - The variety of workout plans so that a user doesn't feel stale or fee
 NF.4.3.1 - An external requirement would a small server to hold the database aspect of the website. Until we find another solution, we'll be using mySQL workbench that provides a miniature server for this small case scenario. 
 
 4.4 Quality Requirements
-What quality expectations do your users have? Is your system life-critical? Describe such issues, then list specific requirements using item numbers as NF.4.4.X.
+NF.4.4.1 - Our website to ensure a good quality of life it would be great to have it running on its own url with github as well as have a mini server serving as the supply of the database aspect of the storage of all the workout plans and personal information of people using the website. 
 
 
 
@@ -75,3 +75,4 @@ What quality expectations do your users have? Is your system life-critical? Desc
 
 5. Appendices
 Include external documents that describe domain or constraints or any necessary information. Use URL links if possible.
+* No other external documents are needed for this step 
