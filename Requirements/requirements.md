@@ -41,20 +41,26 @@ https://github.com/dustinbachman/Scallywags/blob/main/Site/userstories.md
 
 4. System and Non-functional Requirements
 4.1 External Interface Requirements (User,Hardware,Software,Communications)
-Describe what kinds of interfaces your product has, and what they do. Then list specific requirements using item numbers as NF.4.1.X.
-4.1.1 - 
+Describe what kinds of interfaces your product has, and what they do. 
+4.1.1 - Its a website interface so it'll be using a Graphical User Interface, which will be able to 
+
+4.1.2 - Menu-Based Interfaces for Web Clients or Browsing for the database aspect which will contain all the data such as the workouts, workout plans, and videos url.
 
 4.2 Performance Requirements
 Describe your product's performance needs. Then list specific requirements using item numbers as NF.4.2.X.
+NF.4.2.1 - Our website would need to perform at a high rate so that a user can receieve their workout plan immediately so a functional server would be up 
+
+NF.4.2.2 - The variety of workout plans so that a user doesn't feel stale or feel too repetitive of doing the workouts. 
 
 4.3 Design Constraints
-Describe external requirements that will constrain your design choices. Then list specific requirements using item numbers as NF.4.3.X.
+NF.4.3.1 - An external requirement would a small server to hold the database aspect of the website. Until we find another solution, we'll be using mySQL workbench that provides a miniature server for this small case scenario. 
 
 4.4 Quality Requirements
 What quality expectations do your users have? Is your system life-critical? Describe such issues, then list specific requirements using item numbers as NF.4.4.X.
 
+
 4.5 Other Requirements
-Anything else you need to say. Use item numbers NF.4.5.X.
+* No Other Requirements are needed 
 
 5. Appendices
 Include external documents that describe domain or constraints or any necessary information. Use URL links if possible.
