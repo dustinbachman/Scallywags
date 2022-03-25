@@ -1,10 +1,13 @@
-Requirements Specification for [Project/Product Name]
+Requirements Specification for Syntax Error Scallywags
+
 1. Introduction
 1.1 Purpose of Product
-A one-paragraph description of your product's purpose.
 
+* The purpose of our product is to have a free use of service for people to use and get inspired to workout and get motivated to have a good healthy balance in life. The main idea of this product is to have a website in which someone can have a scheduled structured gym set of workouts that anybody could use either they're a beginner, intermediate, expert working out. It contains a calendar functionality to keep track of the number of times someone logs in and goes through the process as well as have a reminder system to remind someone to get their workout in either by text messaging or email notification. The website will have a system of database to store the different workout types to specific categories of the body so depending on the number of times you wish to workout per week. You'll have leg day, arms day, chest day, calves day, etc. for different days so you won't have to research and keep accordance what workout you should be doing for the specific day of workout. Lastly, with each workout name it'll contain a video/gif of the simulation of the workout itself showing how its done in order to avoid injuries for the user. 
+* 
 1.2 Scope of Product
 A short description of your product's scope (what it includes and what it does not include). Part of your problem statement might be useful here, but focus on the scope of the product.
+
 
 1.3 Acronyms, Abbreviations, Definitions
 Any important terms that are required to understand your project documents.
