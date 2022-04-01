@@ -43,6 +43,7 @@
 		Link to image: https://github.com/dustinbachman/Scallywags/blob/main/Site/Architecture.jpg
 		
 1.6: Conclusion: 
+<<<<<<< HEAD
 		In conclusion, our architectural style is the Event-Driven Architecture and with it some downfalls of it 
 		is that it can cause duplication of events and lack of clear workflow order. Meaning without proper organization 
 		and planning, a single event of our website can cause multiple duplicate events to trigger.
