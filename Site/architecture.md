@@ -1,11 +1,13 @@
  
  
 1.1 Team Name and Team Member Names 
+
 		Team Name: Syntax Error Scallywags
 		Team Members: Elias Leverett, Adrian Collier, Dustin Bachman, Kevin Haro
 	
 	
 1.2 Project Overview: 
+
 		A workout web app that allows user to get workouts, track their previous workouts, 
 		and learn new workouts. We have a calendar portion that allows users to keep 
 		track of what they have previously worked out. We have small tutorial gifs/videos
@@ -15,6 +17,7 @@
 		
 
 1.3: Key Architectural Drivers: 
+
 		The main deciding factors in choosing our project’s architecture were simplicity of use 
 		and ease of understanding, as well as what our current skills allow us to implement. We intend to 
 		create a functioning website that will produce a workout routine, as well as store the user’s 
@@ -24,6 +27,7 @@
 		
 			
 1.4: Architectural Style Choices: 
+
 		Style 1 - Our first candidate is the Event-Driven Architecture. Due to the nature of our workout application project, 
 		It is heavily dependent on buttons, text boxes, scroll bars, and other objects. All these functions implement 
 		event-listeners that will activate the desired function and output its result. 
@@ -39,18 +43,20 @@
 				
 		
 1.5: Our Architecture: 
+
 		Our architecture is the Event-Driven Architecture.
 		Link to image: https://github.com/dustinbachman/Scallywags/blob/main/Site/Architecture.jpg
 		
 1.6: Conclusion: 
+
 		In conclusion, our architectural style is the Event-Driven Architecture and with it some downfalls of it 
 		is that it can cause duplication of events and lack of clear workflow order. Meaning without proper organization 
 		and planning, a single event of our website can cause multiple duplicate events to trigger.
 		
-			- A prime example is the same workout displaying of an abodemen workout to display in leg 
+		- A prime example is the same workout displaying of an abodemen workout to display in leg 
 			or chest workouts causing confusion for the user. 
 			
-			- Another example is name confusion of a workout, with not labeling stuff properly we can 
+		- Another example is name confusion of a workout, with not labeling stuff properly we can 
 			cause a name convention confusion within our team. 
 				
 		
