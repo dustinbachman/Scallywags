@@ -39,8 +39,8 @@
 				
 		
 1.5: Our Architecture: 
-		Our architecture is...
-		
+		Our architecture is the Event-Driven Architecture.
+		Link to image: https://github.com/dustinbachman/Scallywags/blob/main/Site/Architecture.jpg
 		
 1.6: Conclusion: 
 		Our architectural style is... 
