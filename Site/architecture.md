@@ -15,13 +15,27 @@
 		
 
 1.3: Key Architectural Drivers: 
-		The main requirements that were essential in driving our architecture decision were... 
+		The main deciding factors in choosing our project’s architecture were simplicity of use 
+		and ease of understanding, as well as what our current skills allow us to implement. We intend to 
+		create a functioning website that will produce a workout routine, as well as store the user’s 
+		previous workouts, and our primary goal in doing so is to have it work as effectively as possible 
+		while still being intuitive and easy to understand.
+
 		
-		
-		
+			
 1.4: Architectural Style Choices: 
-		Our two candidates for choosing our architectural style were...
-		The architectural style that we ended up choosing was...
+		Style 1 - Our first candidate is the Event-Driven Architecture. Due to the nature of our workout application project, 
+		It is heavily dependent on buttons, text boxes, scroll bars, and other objects. All these functions implement 
+		event-listeners that will activate the desired function and output its result. 
+		
+		Style 2 - Our second candidate is the Client-Server Architecture. Our project could also benefit from this architecture 
+		for similar reasons. Many client-side requests may include “generate a random workout” or “view tutorial on proper 
+		form for this exercise” and the server-side response would be to activate those functions and return their output. 
+		
+		We chose Style 1 because it most closely aligns with our goals for this project. We plan to build our application around 
+		“events”, for example,  clicking the “generate random workout” button should activate an event-listener that will 
+		call the function responsible for generating a random workout. Clicking the “workout complete” button should activate 
+		an event-listener that will call the function responsible for logging this workout into the calendar.
 				
 		
 1.5: Our Architecture: 
