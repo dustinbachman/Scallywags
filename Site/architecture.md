@@ -43,7 +43,9 @@
 		Link to image: https://github.com/dustinbachman/Scallywags/blob/main/Site/Architecture.jpg
 		
 1.6: Conclusion: 
-		Our architectural style is... 
-		Some issues and risks that come with this architecture are...
+		In conclusion, our architectural style is the Event-Driven Architecture and with it some downfalls of  it is that it can  cause duplication of events and lack of clear workflow order. Meaning without proper organization and planning, a single event of our website can cause multiple duplicate events to trigger. 
+	A prime example is the same workout displaying of an abodemen workout to display in leg or chest workouts causing confusion for the user. 
+	Another example is name confusion of a workout, with not labeling stuff properly we can cause a name convention confusion within our team. 
+
 				
 		
