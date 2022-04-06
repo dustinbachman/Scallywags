@@ -4,18 +4,28 @@
     box-sizing: border-box;
 }
 
+ 
+
+.index-h1 {
+    font-family: Arial, 'Times New Roman', Times, serif;
+    font-size: 35px; 
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     height: 100vh;
-    background: #eee;
+    background-image: url("weights2.jpg");
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
 }
-
+ 
 form {
-    background: #fff;
+    background: rgb(246, 240, 240);
     padding: 60px;
     width: 550px;
     max-width: calc(100% - 60px);
