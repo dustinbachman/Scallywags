@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Generator</title>
+	<style>
+	.center{ text-align: center; }
+	.t{ text-align: center; 
+		font-size: 40px; 
+	}
+	.gif { 
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	body {
+		background-image: url("background.jpg");
+	}
+	button {
+		width: 100px;
+		cursor: pointer;
+		box-shadow: 0px 0px 2px rgb(32, 31, 31);
+		border: darkblue;
+		outline: none;
+		padding: 5px;
+		border-radius: 5px;
+		color: rgb(10, 7, 7);
+	}
+	h1 { 
+		font-family: sans-serif;
+	}
+	h2 { 
+		font-family: sans-serif;
+	}
+	</style>
+	
+	<script>
+		const workouts = ["Close Grip Chin-up", "Curl", "Hammer Curl"];
+		var time = 30;
+		var workout, workInt; 
+		var sets = 3;
+		
+		function startTimer(){
+			var counter = time;
+			setInterval(function() {
+			counter--;
+			if (counter >= 0) {
+				span = document.getElementById("count");
+				span.innerHTML = counter;
+			}
+			if (counter === 0) {
+				span = document.getElementById("count");
+				span.innerHTML = "Finished!";
+				clearInterval(counter);
+			}
+			}, 1000);
+		}
+		function start() {
+			document.getElementById("count").style="color:black;";
+			startTimer();
+		}
+		
+		function getRandomInt(max) { 
+			return Math.floor(Math.random() * max); 
+		}
+		
+		function getRandomWorkout() { 
+			workInt = getRandomInt(workouts.length); 
+			workout = workouts[workInt]; 
+			return workout;
+		} 
+		
+		function setDec() { 
+			sets--; 
+		} 
+		
+		function getSets() { 
+			return sets--;
+		} 
+		
+		function getTime() { 
+			return time;
+		}
+		
+		function workoutGif() { 
+			if ( workInt == 0 ) 
+				return "Gifs/closeGrip.gif";
+			else if ( workInt == 1 ) 
+				return "Gifs/Curl.gif";
+			else 
+				return "Gifs/Hammer.gif";
+		} 
+		
+		function setNum(){
+			const numberElement = document.getElementById("setNum");
+			const number = parseInt(numberElement.innerText, 10) - 1;
+			numberElement.innerText = number;
+			if ( number == 0 ) {
+				alert("Finished with this workout!");
+				nextWorkout();
+			}
+		}
+		
+		function nextWorkout() { 
+			window.location.replace("Calves.html");
+		} 
+		
+		function display_image( ) {
+			var a = document.createElement("img");
+			a.src = workoutGif();
+			a.height = 200;
+			document.getElementsByTagName('h2')[0].appendChild(a);
+		}
+		
+    </script>
+	
+</head>
+<body onload = "getRandomWorkout()">
+	<button onclick="window.location.href='../index.html';">
+          Home
+    </button>
+	</br>
+	</br>
+	<button onclick="window.location.href='../calendarFeature/calendarPage.html';">
+          Calendar
+    </button>
+	<div class = "center">
+		<h1> Your current workout is: <script> document.write(getRandomWorkout()); </script> </h1>
+		<h1> Time Left: </h1>
+		<div class = "t" >
+		<span id = "count"> <script> document.write(getTime()) </script> </span>
+		</div>
+		</br>
+		<button onclick = "start()"> Start Timer </button>	
+		</br>
+		<h2> Example: </br> </br> </h2>	
+		<script> display_image() </script>
+		</br>	
+		<h1> <div id = "setNum"> <script> document.write(getSets()); </script> </div> Remaining Sets </h1>
+		<button onclick = "setNum()">Next Set</button>
+	</div>
+
+</body>
+</html>
