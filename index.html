@@ -40,10 +40,11 @@
         <br>
         <input type="radio" name="triceps" id="triceps" value="triceps">
         <label for="triceps">triceps</label>
-        <br>
-
-		<div>
-            <label for="dropdown">How many workouts per muscle group?</label>
+        
+        <br><br>
+        <label for="dropdown">How many workouts per muscle group?</label><br>
+		<div class ="dropdown">
+            
             <select name="dropdown" id="muscleDropdown">
                 <option value="1">1 workout</option>
                 <option value="2">2 workouts</option>
@@ -54,9 +55,11 @@
 				var numPerGroup = m.options[m.selectedIndex].value; 
 			</script>
         </div>
+        
+        <br><br>
 		
-        <div>
-            <label for="dropdown">How long per set?</label>
+        <label for="dropdown">How long per set?</label><br>
+        <div class ="dropdown">
             <select name="dropdown" id="timeDropdown">
                 <option value="30">30 seconds</option>
                 <option value="45">45 seconds</option>
@@ -68,8 +71,11 @@
 				var setTime = t.options[t.selectedIndex].value; 
 			</script>
         </div>
-        <div>
-            <label for="dropdown">How many sets?</label>
+
+        <br><br>
+
+        <label for="dropdown">How many sets?</label><br>
+        <div class = "dropdown">
             <select name="drop down" id="numDropdown">
                 <option value="1">1 set</option>
                 <option value="2">2 sets</option>
@@ -80,13 +86,18 @@
 				var n = document.getElementById("numDropdown");
 				var numOfSets = n.options[n.selectedIndex].value; 
 			</script>
-        </div>
+        </div><br>
 
-        <label for="slidecounter">How often per week?</label>
-        <div class="slidecontainer">
-            <input type="range" min="1" max="7" value="3" class="slider" id="myRange">
-          </div>
-        </a>
+        <label for="container">How often per week?</label><br>
+        
+        <div class="container">
+            <div class="slider">
+            <input type = "range" min="1" max="7" onchange="rangevalue.value=value"/>
+              <output id="rangevalue">4</output> time(s)
+            </div>
+            </div>
+
+        <br>
 
     
 	
