@@ -5,6 +5,7 @@
 
 
 3. Acceptance Testing 
+
 	The main acceptance testing that we used for our system is to test all possible cases for users' requests. We focused our testing and development on our user stories, and that was the main idea that led our testing. 
 	We took what the users requested and developed their wishes to the best of our ability. These users also gave us some ideas of tests to use to make sure the system is what they imagined. We took these ideas and made 
 	sure to test them all out to make sure it was specifically what the user requested, we also added some of our own tests that we thought of to make sure that our system was as well run and bug free as we could get it.
