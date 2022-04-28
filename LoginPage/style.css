@@ -1,0 +1,233 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-decoration: none;
+	text-transform: capitalize;
+	transition: all 0.3s linear;
+	outline: none;
+
+}
+*::selection{
+	background-color: black;
+	color: white;
+
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+
+}
+/* Start Header */
+header{
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),
+	url(./images/loginPirate.jpg);
+	background-position: center;
+	background-size: cover;
+	clip-path: polygon(100% 0, 100% 91%, 49% 100%, 0 89%, 0 0);
+}
+nav{
+	padding: 2% 6%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+}
+
+nav .logo{
+	font-size: 3rem;
+	cursor: pointer;
+}
+nav .logo span{
+	color: black;
+}
+nav .links{
+	padding-left: 0;
+}
+nav .links li{
+	display: inline-block;
+	margin-left: 1rem;
+	font-size: 1.5rem;
+
+}
+nav .links li a{
+	color: #fff;
+}
+
+nav .links li a:hover{
+	color: black;
+}
+
+header .content{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+
+}
+
+header .content h1{
+	font-size: 8rem;
+	text-transform: uppercase;
+	color: black;
+}
+
+.btn{
+	padding: 0.5rem 1.;
+	background-color: transparent;
+	border: 0.3rem solid gray;
+	color: lightgrey;
+	margin-top: 1.8rem;
+	cursor: pointer;
+	border-radius: 0.5rem;
+	font-size: 3rem;
+
+}
+
+.btn:hover{
+	background-color: black;
+	color: white;
+}
+
+nav .open,.close{
+	font-size: 1.8rem;
+	cursor: pointer;
+	color: yellowgreen;
+	display: none; 
+}
+
+@media (max-width:850px){
+	nav .links{
+		height: 25rem;
+		width: 60%;
+		position: fixed; 
+		top: 0;
+		right: 0;
+		border-radius: 1.2rem;
+		background-color: white;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		z-index: 9999;
+	}
+	nav .links li{
+		font-size: 1.8rem;
+		margin: 0.5rem;
+	}
+	nav .links li a{
+		color: black;
+	}
+	nav .open, nav .links .close{
+		display: block;
+		position: absolute;
+		top: 1.8rem;
+		right: 1.8rem;
+
+	}
+	header .content h1{
+		font-size: 6rem;
+
+	}
+}
+
+
+/* Start About */
+.about .row{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 2% 6%;
+}
+
+.about .row .image{
+	flex: 1 1 40rem;
+	padding: 2rem;
+}
+
+.about .row .image img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover; 
+}
+
+.about .row .content{
+	flex: 1 1 40rem;
+	padding: 2rem;
+	text-align: center;
+
+}
+.about .row .content h1{
+	font-size: 3rem;
+	color: black;
+	margin-bottom: 5 rem;
+}
+
+.about .row .content p{
+	line-height: 1.7;
+	font-size: 1.2rem;
+	margin-bottom: 1.2rem;
+}
+
+
+/* Start Register */
+.Register{
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+	url(./images/registerLogin.jpg);
+	min-height: 100vh;
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+}
+
+.Register h1{
+	font-size: 3.8rem;
+	padding: 0.5rem;
+	display: inline-block;
+	color: rgb(4, 147, 213);
+	border-bottom: .3rem solid rgb(41, 172, 216);
+	margin-bottom: 2.2rm;
+}
+
+.Register form{
+	padding: 2% 6%; 
+	margin: 0 auto;
+}
+
+.Register form .input_box{
+	display: flex;
+	justify-content:space-between;
+	flex-wrap: wrap;
+}
+
+.Register form .input_box input, textarea{
+	height: 4rem;
+	width: 49%;
+	background-color: transparent;
+	color: darkgrey;
+	padding: 3rem 1rem;
+	margin: 1rem 0;
+	font-size: 2rem;
+	border: 1px solid darkgrey;
+
+}
+
+
+.Register form textarea{
+	height: 20rem;
+	width: 100%;
+	resize: none; 
+	padding: 1rem;
+}
+
+@media(max-width:1100px){
+	.register form .input_box input{
+		width: 100%;
+	}
+}
