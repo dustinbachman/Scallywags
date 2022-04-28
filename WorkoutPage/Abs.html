@@ -38,9 +38,10 @@
 	
 	<script>
 		const workouts = ["Sit-ups", "Pull-ups", "Squats"];
-		var time = 30;
+		var time = sessionStorage.getItem("setTime");
 		var workout, workInt; 
-		var sets = 3;
+		var sets = sessionStorage.getItem("numOfSets");
+		var musBin = sessionStorage.getItem("musBin");
 		
 		function startTimer(){
 			var counter = time;
@@ -114,10 +115,14 @@
 			document.getElementsByTagName('h2')[0].appendChild(a);
 		}
 		
+		function getNextPage() { 
+			
+		} 
+		
     </script>
 	
 </head>
-<body onload = "getRandomWorkout()">
+<body onload = "getRandomWorkout();console.log(musBin);">
 	<button onclick="window.location.href='../index.html';">
           Home
     </button>

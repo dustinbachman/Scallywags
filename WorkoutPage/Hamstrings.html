@@ -38,9 +38,9 @@
 	
 	<script>
 		const workouts = ["Squats", "Deadlifts", "Romanian Deadlifts"];
-		var time = 30;
+		var time = sessionStorage.getItem("setTime");
 		var workout, workInt; 
-		var sets = 3;
+		var sets = sessionStorage.getItem("numOfSets");
 		
 		function startTimer(){
 			var counter = time;

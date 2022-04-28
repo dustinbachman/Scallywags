@@ -6,6 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workout Generator</title>
     <link rel="stylesheet" href="style.css">
+	
+	<script> 
+		const muscles = ["Abs", "Back", "Biceps", "Calves", "Chest", "Forearms", "Hamstrings", "Shoulders", "Triceps"];
+	
+		function getVar() { 
+			var n = document.getElementById("numDropdown");
+			var numOfSets = n.options[n.selectedIndex].value; 
+			var t = document.getElementById("timeDropdown");
+			var setTime = t.options[t.selectedIndex].value; 
+			var m = document.getElementById("muscleDropdown");
+			var numPerGroup = m.options[m.selectedIndex].value; 
+			sessionStorage.setItem("numOfWorkouts", numPerGroup);
+			sessionStorage.setItem("numOfSets", numOfSets);
+			sessionStorage.setItem("setTime", setTime);
+			var mus= document.getElementsByType('radio');
+			var musBin = ''; 
+			var nextPage;
+			for ( i = 0; i < mus.length; i++ ) { 
+				if(musc[i].checked) 
+					musBin = musBin + '1'; 
+				else 
+					musBin = musBin + '0'; 
+			} 
+			sessionStorage.setItem("musBin", musBin);
+			/* find next page
+			for ( i = 0; i < muscles.length; i++ ) {
+				if ( musBin.charAt(i) == '0' ) {
+					nextPage = muscles[i]; 
+					musBin.charAt(i) = '1'; 
+					break;
+				}
+			}
+			*/
+			
+		} 
+	</script>
+	
 </head>
 <body>
     
@@ -50,10 +87,6 @@
                 <option value="2">2 workouts</option>
                 <option value="3">3 workouts</option>
             </select>
-			<script> 
-				var m = document.getElementById("muscleDropdown");
-				var numPerGroup = m.options[m.selectedIndex].value; 
-			</script>
         </div>
         
         <br><br>
@@ -66,10 +99,6 @@
                 <option value="60">60 seconds</option>
                 <option value="90">90 seconds</option>
             </select>
-			<script> 
-				var t = document.getElementById("timeDropdown");
-				var setTime = t.options[t.selectedIndex].value; 
-			</script>
         </div>
 
         <br><br>
@@ -82,10 +111,6 @@
                 <option value="3">3 sets</option>
                 <option value="4">4 sets</option>
             </select>
-			<script> 
-				var n = document.getElementById("numDropdown");
-				var numOfSets = n.options[n.selectedIndex].value; 
-			</script>
         </div><br>
 
         <label for="container">How often per week?</label><br>
@@ -96,12 +121,11 @@
               <output id="rangevalue">4</output> time(s)
             </div>
             </div>
-
         <br>
 	</br>
 
 
-<a href = "WorkoutPage\Abs.html" class = "button"> Next </a>
+<a href = "WorkoutPage\Abs.html" class = "button" onclick = "getVar()"> Next </a>
 <a href="calendarFeature\calendarPage.html" class = "button"> Calendar </a>
 
 
