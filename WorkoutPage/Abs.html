@@ -41,7 +41,8 @@
 		var time = sessionStorage.getItem("setTime");
 		var workout, workInt; 
 		var sets = sessionStorage.getItem("numOfSets");
-		// var musBin = sessionStorage.getItem("musBin");
+		var musc = JSON.parse(sessionStorage.getItem("musc"));
+		
 		
 		function startTimer(){
 			var counter = time;
@@ -67,11 +68,11 @@
 			return Math.floor(Math.random() * max); 
 		}
 		
-		function getRandomWorkout() { 
-			var musBin = sessionStorage.getItem("musBin")
+		function getRandomWorkout() {
 			workInt = getRandomInt(workouts.length); 
 			workout = workouts[workInt]; 
-			window.alert(musBin);
+			for ( var i = 0; i < musc.length; i++ ) 
+				console.log(musc[i]);
 			return workout;
 		} 
 		
@@ -117,11 +118,18 @@
 			document.getElementsByTagName('h2')[0].appendChild(a);
 		}
 		
+		function check() { 	
+			if ( musc[0] == true ) 
+				return getRandomWorkout(); 
+			else 
+				nextWorkout();
+		} 
+		
 		
     </script>
 	
 </head>
-<body onload = "getRandomWorkout()">
+<body onload = "check();">
 	<button onclick="window.location.href='../index.html';">
           Home
     </button>

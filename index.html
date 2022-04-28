@@ -9,26 +9,43 @@
 	
 	<script> 
 	
+		// Sets the global session variables
 		function getVar() { 
 			var n = document.getElementById("numDropdown");
 			var numOfSets = n.options[n.selectedIndex].value; 
 			var t = document.getElementById("timeDropdown");
 			var setTime = t.options[t.selectedIndex].value; 
-			var m = document.getElementById("muscleDropdown");
+			var m  = document.getElementById("muscleDropdown");
 			var numPerGroup = m.options[m.selectedIndex].value; 
 			sessionStorage.setItem("numOfWorkouts", numPerGroup);
 			sessionStorage.setItem("numOfSets", numOfSets);
 			sessionStorage.setItem("setTime", setTime);
-			var musBin = '111111111'; 
+			var numMuscles = 9; 
+			var muscleArray = new Array(numMuscles).fill(false); 
+			// check for requested workouts
+			if ( document.getElementById('abs').checked ) 
+				muscleArray[0] = true;
+			if ( document.getElementById('back').checked ) 
+				muscleArray[1] = true;
+			if ( document.getElementById('biceps').checked ) 
+				muscleArray[2] = true;
+			if ( document.getElementById('calves').checked ) 
+				muscleArray[3] = true;
+			if ( document.getElementById('chest').checked ) 
+				muscleArray[4] = true;
+			if ( document.getElementById('forearms').checked ) 
+				muscleArray[5] = true;
+			if ( document.getElementById('hamstrings').checked ) 
+				muscleArray[6] = true;
+			if ( document.getElementById('shoulders').checked ) 
+				muscleArray[7] = true;
+			if ( document.getElementById('triceps').checked ) 
+				muscleArray[8] = true;
+			sessionStorage.setItem('musc', JSON.stringify(muscleArray));
 			
-			var musInput = getElementById('abs');
-			sessionStorage.setItem("musBin", musBin);
 			
 		} 
 		
-		function replaceAt(index, replacement) { 
-			return this.substring(0, index) + replacement + this.substring(index + replacement.length ); 
-		} 
 	</script>
 	
 </head>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finished!</title>
+	<style>
+	.center{ text-align: center; }
+	.t{ text-align: center; 
+	}
+	.gif { 
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	body {
+		background-image: url("background.jpg");
+	}
+	h1 { 
+		text-align: center; 
+		font-size: 100px;
+	}
+	
+	</style>
+	
+	<script>
+		var time = sessionStorage.getItem("setTime");
+		var workout, workInt; 
+		var num = sessionStorage.getItem("numOfWorkouts");
+		var sets = sessionStorage.getItem("numOfSets");
+		var musc = JSON.parse(sessionStorage.getItem("musc"));
+		num--;
+		sessionStorage.setItem("numOfWorkouts", num);
+		
+		
+		function check() { 
+			if ( num == 0 ) {
+				alerts();
+				window.location.replace("../index.html");
+			}
+			else { 
+				alerts();
+				window.location.replace("Abs.html");
+			}	
+		}
+		
+		function alerts() { 
+			if ( num == 0 ) 
+				alert("Congratulations! You finished all your rounds!"); 
+			else 
+				alert("Ready for next round?");
+		}
+		
+		
+    </script>
+	
+</head>
+<body onload = "check()">
+	<button onclick="window.location.href='../index.html';">
+          Home
+    </button>
+	</br>
+	</br>
+	<button onclick="window.location.href='../calendarFeature/calendarPage.html';">
+          Calendar
+    </button>
+	
+	<h1> Finished! </h1>
+
+</body>
+</html>

@@ -41,6 +41,7 @@
 		var time = sessionStorage.getItem("setTime");
 		var workout, workInt; 
 		var sets = sessionStorage.getItem("numOfSets");
+		var musc = JSON.parse(sessionStorage.getItem("musc"));
 		
 		function startTimer(){
 			var counter = time;
@@ -114,10 +115,17 @@
 			document.getElementsByTagName('h2')[0].appendChild(a);
 		}
 		
+		function check() { 	
+			if ( musc[4] == true ) 
+				return getRandomWorkout(); 
+			else 
+				nextWorkout();
+		} 
+		
     </script>
 	
 </head>
-<body onload = "getRandomWorkout()">
+<body onload = "check()">
 	<button onclick="window.location.href='../index.html';">
           Home
     </button>
