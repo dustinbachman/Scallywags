@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
 	
 	<script> 
-		const muscles = ["Abs", "Back", "Biceps", "Calves", "Chest", "Forearms", "Hamstrings", "Shoulders", "Triceps"];
 	
 		function getVar() { 
 			var n = document.getElementById("numDropdown");
@@ -20,26 +19,15 @@
 			sessionStorage.setItem("numOfWorkouts", numPerGroup);
 			sessionStorage.setItem("numOfSets", numOfSets);
 			sessionStorage.setItem("setTime", setTime);
-			var mus= document.getElementsByType('radio');
-			var musBin = ''; 
-			var nextPage;
-			for ( i = 0; i < mus.length; i++ ) { 
-				if(musc[i].checked) 
-					musBin = musBin + '1'; 
-				else 
-					musBin = musBin + '0'; 
-			} 
-			sessionStorage.setItem("musBin", musBin);
-			/* find next page
-			for ( i = 0; i < muscles.length; i++ ) {
-				if ( musBin.charAt(i) == '0' ) {
-					nextPage = muscles[i]; 
-					musBin.charAt(i) = '1'; 
-					break;
-				}
-			}
-			*/
+			var musBin = '111111111'; 
 			
+			var musInput = getElementById('abs');
+			sessionStorage.setItem("musBin", musBin);
+			
+		} 
+		
+		function replaceAt(index, replacement) { 
+			return this.substring(0, index) + replacement + this.substring(index + replacement.length ); 
 		} 
 	</script>
 	
@@ -51,7 +39,7 @@
         <h1 class="index-h1">Generate a Workout Routine</h1>
         
         <p>What muscles would you like exercises for?</p>
-        <input type="radio" name="abs" id="abs" value="abs">
+        <input type="radio" name="workout" id="abs" value="abs">
         <label for="abs">abs</label>
         <br>
         <input type="radio" name="back" id="back" value="back">
