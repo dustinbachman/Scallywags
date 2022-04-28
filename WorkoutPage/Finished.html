@@ -25,31 +25,21 @@
 	</style>
 	
 	<script>
-		var time = sessionStorage.getItem("setTime");
-		var workout, workInt; 
+		// Variables used for this page
 		var num = sessionStorage.getItem("numOfWorkouts");
-		var sets = sessionStorage.getItem("numOfSets");
-		var musc = JSON.parse(sessionStorage.getItem("musc"));
 		num--;
 		sessionStorage.setItem("numOfWorkouts", num);
 		
-		
+		// Checks how many rounds are left.
 		function check() { 
 			if ( num == 0 ) {
-				alerts();
+				alert("Congratulations! You have finished all your rounds.");
 				window.location.replace("../index.html");
 			}
 			else { 
-				alerts();
+				alert("Ready for the next round?");
 				window.location.replace("Abs.html");
 			}	
-		}
-		
-		function alerts() { 
-			if ( num == 0 ) 
-				alert("Congratulations! You finished all your rounds!"); 
-			else 
-				alert("Ready for next round?");
 		}
 		
 		

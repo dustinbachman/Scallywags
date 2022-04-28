@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workout Generator</title>
+    <title>Abs</title>
 	<style>
 	.center{ text-align: center; }
 	.t{ text-align: center; 
@@ -37,13 +37,15 @@
 	</style>
 	
 	<script>
+		// Variables used for this page.
+		// Session Storage was used to keep track of global variables.
 		const workouts = ["Sit-ups", "Pull-ups", "Squats"];
 		var time = sessionStorage.getItem("setTime");
 		var workout, workInt; 
 		var sets = sessionStorage.getItem("numOfSets");
 		var musc = JSON.parse(sessionStorage.getItem("musc"));
 		
-		
+		// Timer Function
 		function startTimer(){
 			var counter = time;
 			setInterval(function() {
@@ -59,35 +61,41 @@
 			}
 			}, 1000);
 		}
+		
+		// Starts the workout
 		function start() {
 			document.getElementById("count").style="color:black;";
 			startTimer();
 		}
 		
+		// Gets a random integer.
 		function getRandomInt(max) { 
 			return Math.floor(Math.random() * max); 
 		}
 		
+		// Uses the random integer generator to get a random workout.
 		function getRandomWorkout() {
 			workInt = getRandomInt(workouts.length); 
 			workout = workouts[workInt]; 
-			for ( var i = 0; i < musc.length; i++ ) 
-				console.log(musc[i]);
 			return workout;
 		} 
 		
+		// Decrements the number of sets left.
 		function setDec() { 
 			sets--; 
 		} 
 		
+		// Tells how many sets are left and decrements.
 		function getSets() { 
 			return sets--;
 		} 
 		
+		// Tells how much time is left.
 		function getTime() { 
 			return time;
 		}
 		
+		// Generates the gif tutorial for the workout.
 		function workoutGif() { 
 			if ( workInt == 0 ) 
 				return "Gifs/Situp.gif";
@@ -97,6 +105,7 @@
 				return "Gifs/Squat.gif";
 		} 
 		
+		// Gets the amount of sets left and tells if the user is done.
 		function setNum(){
 			const numberElement = document.getElementById("setNum");
 			const number = parseInt(numberElement.innerText, 10) - 1;
@@ -107,10 +116,12 @@
 			}
 		}
 		
+		// Goes to the next workout.
 		function nextWorkout() { 
 			window.location.replace("Back.html");
 		} 
 		
+		// Displays the the workout gif.
 		function display_image( ) {
 			var a = document.createElement("img");
 			a.src = workoutGif();
@@ -118,6 +129,7 @@
 			document.getElementsByTagName('h2')[0].appendChild(a);
 		}
 		
+		// Checks whether or not this muscle set was requested. 
 		function check() { 	
 			if ( musc[0] == true ) 
 				return getRandomWorkout(); 

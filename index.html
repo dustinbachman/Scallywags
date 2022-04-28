@@ -10,6 +10,7 @@
 	<script> 
 	
 		// Sets the global session variables
+		// Session storage was used to keep track of global variables throughout the pages.
 		function getVar() { 
 			var n = document.getElementById("numDropdown");
 			var numOfSets = n.options[n.selectedIndex].value; 
@@ -22,7 +23,7 @@
 			sessionStorage.setItem("setTime", setTime);
 			var numMuscles = 9; 
 			var muscleArray = new Array(numMuscles).fill(false); 
-			// check for requested workouts
+			// check for requested workouts and update array
 			if ( document.getElementById('abs').checked ) 
 				muscleArray[0] = true;
 			if ( document.getElementById('back').checked ) 
@@ -41,8 +42,7 @@
 				muscleArray[7] = true;
 			if ( document.getElementById('triceps').checked ) 
 				muscleArray[8] = true;
-			sessionStorage.setItem('musc', JSON.stringify(muscleArray));
-			
+			sessionStorage.setItem('musc', JSON.stringify(muscleArray));	
 			
 		} 
 		
