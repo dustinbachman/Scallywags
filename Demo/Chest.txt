@@ -1,2 +1,5 @@
 Bench press
 Dips
+Push-Up
+Incline-Push-Up
+Decline-Push-Up
