@@ -210,11 +210,11 @@ nav .open,.close{
 	height: 4rem;
 	width: 49%;
 	background-color: transparent;
-	color: darkgrey;
+	color: white;
 	padding: 3rem 1rem;
 	margin: 1rem 0;
 	font-size: 2rem;
-	border: 1px solid darkgrey;
+	border: 1px solid black;
 
 }
 
