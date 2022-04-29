@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout</title>
+	<style>
+	.center{ text-align: center; }
+	.t{ text-align: center; 
+		font-size: 40px; 
+	}
+	.gif { 
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	body {
+		background-image: url("background.jpg");
+	}
+	button {
+		width: 100px;
+		cursor: pointer;
+		box-shadow: 0px 0px 2px rgb(32, 31, 31);
+		border: darkblue;
+		outline: none;
+		padding: 5px;
+		border-radius: 5px;
+		color: rgb(10, 7, 7);
+	}
+	h1 { 
+		font-family: sans-serif;
+	}
+	h2 { 
+		font-family: sans-serif;
+	}
+	</style>
+	
+	<script>
+		// Variables used for this page.
+		// Session Storage was used to keep track of global variables.
+		const absA = ["Sit-ups", "Pull-ups", "Squats"];
+		const backA = ["Deadlifts", "Pull-ups", "Chin-ups"];
+		const bicepsA = ["Close Grip Chin-up", "Curl", "Hammer Curl"];
+		const calvesA = ["Standing Calf Raises", "Jump Rope", "Single-Leg Calf Raises"];
+		const chestA = ["Bench Press", "Dip", "Pushup"];
+		const forearmsA = ["Reverse Curls", "Wrist Rollers", "Wrist Curls"];
+		const hamstringsA = ["Squats", "Deadlifts", "Romanian Deadlifts"];
+		const shouldersA = ["Pushups", "Overhead Press", "Lateral Raise"];
+		const tricepsA = ["Kickbacks", "Dips", "Diamond Pushups"];
+		var time = sessionStorage.getItem("setTime");
+		var workout, workInt; 
+		var sets = sessionStorage.getItem("numOfSets");
+		var musc = JSON.parse(sessionStorage.getItem("musc"));
+		var num = sessionStorage.getItem("numOfWorkouts");
+		
+		
+		
+		// Timer Function
+		function startTimer(){
+			var counter = time;
+			setInterval(function() {
+			counter--;
+			if (counter >= 0) {
+				span = document.getElementById("count");
+				span.innerHTML = counter;
+			}
+			if (counter === 0) {
+				span = document.getElementById("count");
+				span.innerHTML = "Finished!";
+				clearInterval(counter);
+			}
+			}, 1000);
+		}
+		
+		// Starts the workout
+		function start() {
+			document.getElementById("count").style="color:black;";
+			startTimer();
+		}
+		
+		// Gets a random integer.
+		function getRandomInt(max) { 
+			return Math.floor(Math.random() * max); 
+		}
+		
+		// Uses the random integer generator to get a random workout.
+		function getRandomWorkout() { 
+			workInt = getRandomInt(absA.length); 
+			if ( currMusc[0] ) {
+				workout = absA[workInt]; 
+				currMusc[0] = false;
+			}
+			else if ( currMusc[1] ) {
+				workout = backA[workInt]; 
+				currMusc[1] = false;
+			}
+			else if ( currMusc[2] ) {
+				workout = bicepsA[workInt]; 
+				currMusc[2] = false;
+			}
+			else if ( currMusc[3] ) {
+				workout = calvesA[workInt]; 
+				currMusc[3] = false;
+			}
+			else if ( currMusc[4] ) {
+				workout = chestA[workInt]; 
+				currMusc[4] = false;
+			}
+			else if ( currMusc[5] ) {
+				workout = forearmsA[workInt]; 
+				currMusc[5] = false;
+			}
+			else if ( currMusc[6] ) {
+				workout = hamstringsA[workInt]; 
+				currMusc[6] = false;
+			}
+			else if ( currMusc[7] ) {
+				workout = shouldersA[workInt]; 
+				currMusc[7] = false;
+			}
+			else if ( currMusc[8] ) {
+				workout = tricepsA[workInt]; 
+				currMusc[8] = false;
+			}
+			sessionStorage.setItem('currMusc', JSON.stringify(muscleArray));	
+			return workout;
+		} 
+		
+		// Decrements the number of sets left.
+		function setDec() { 
+			sets--; 
+		} 
+		
+		// Tells how many sets are left and decrements.
+		function getSets() { 
+			return sets--;
+		} 
+		
+		// Tells how much time is left.
+		function getTime() { 
+			return time;
+		}
+		
+		// Generates the gif tutorial for the workout.
+		function workoutGif() { 
+			if ( musc[0] ) {
+				if ( workInt == 0 ) 
+					return "Gifs/Situp.gif";
+				else if ( workInt == 1 ) 
+					return "Gifs/Pullup.gif";
+				else 
+					return "Gifs/Squat.gif";
+			}
+			if ( musc[1] ) {
+				if ( workInt == 0 ) 
+					return "Gifs/Deadlift.gif";
+				else if ( workInt == 1 ) 
+					return "Gifs/Pullup.gif";
+				else 
+					return "Gifs/Chinup.gif";
+			}
+			if ( musc[2] ) {
+				if ( workInt == 0 ) 
+					return "Gifs/closeGrip.gif";
+				else if ( workInt == 1 ) 
+					return "Gifs/Curl.gif";
+				else 
+					return "Gifs/Hammer.gif";
+			}
+			if ( musc[3] ) {
+				if ( workInt == 0 ) 
+					return "Gifs/calfRaise.gif";
+				else if ( workInt == 1 ) 
+					return "Gifs/jumpRope.gif";
+				else 
+				return "Gifs/singleLeg.gif";
+			}
+			if ( musc[4] ) {
+				if ( workInt == 0 ) 
+					return "Gifs/Bench.gif";
+				else if ( workInt == 1 ) 
+					return "Gifs/Dip.gif";
+				else 
+					return "Gifs/Pushup.gif";
+			}
+			if ( musc[5] ) {
+				if ( workInt == 0 ) 
+					return "Gifs/ReverseCurl.gif";
+				else if ( workInt == 1 ) 
+					return "Gifs/WristRollers.gif";
+				else 
+					return "Gifs/WristCurls.gif";
+			}
+			if ( musc[6] ) {
+				if ( workInt == 0 ) 
+					return "Gifs/Squat.gif";
+				else if ( workInt == 1 ) 
+					return "Gifs/Deadlift.gif";
+				else 
+					return "Gifs/Romanian.gif";
+			}
+			if ( musc[7] ) {
+				if ( workInt == 0 ) 
+					return "Gifs/Pushup.gif";
+				else if ( workInt == 1 ) 
+					return "Gifs/Overhead.gif";
+				else 
+					return "Gifs/Lateral.gif";
+			}
+			if ( musc[8] ) {
+				if ( workInt == 0 ) 
+					return "Gifs/Kickback.gif";
+				else if ( workInt == 1 ) 
+					return "Gifs/Dip.gif";
+				else 
+					return "Gifs/Diamond.gif";
+			}
+		} 
+		
+		// Gets the amount of sets left and tells if the user is done.
+		function setNum(){
+			const numberElement = document.getElementById("setNum");
+			const number = parseInt(numberElement.innerText, 10) - 1;
+			numberElement.innerText = number;
+			if ( number == 0 ) {
+				alert("Finished with this workout!");
+				nextWorkout();
+			}
+		}
+		
+		// Goes to the next workout.
+		function nextWorkout() { 
+			window.location.reload()
+		} 
+		
+		// Displays the the workout gif.
+		function display_image( ) {
+			var a = document.createElement("img");
+			a.src = workoutGif();
+			a.height = 200;
+			document.getElementsByTagName('h2')[0].appendChild(a);
+		}
+		
+		// Checks which muscle sets were requested 
+		function check() { 	
+			if ( !currMusc[0] && !currMusc[1] && !currMusc[2] && !currMusc[3] && !currMusc[4] && !currMusc[5] && !currMusc[6] && !currMusc[7] && !currMusc[8] && num != 0) {
+				num--;
+				sessionStorage.setItem("numOfWorkouts", num);
+				for ( var i = 0; i < musc.length; i++ ) 
+					currMusc[i] = musc[i];
+				getRandomWorkout();
+			}
+			else if ( num == 0 )
+				window.location.replace("../index.html");
+			else 
+				getRandomWorkout();
+		} 
+		
+    </script>
+	
+</head>
+<body onload = "check()">
+	<button onclick="window.location.href='../index.html';">
+          Home
+    </button>
+	</br>
+	</br>
+	<button onclick="window.location.href='../calendarFeature/calendarPage.html';">
+          Calendar
+    </button>
+	<div class = "center">
+		<h1> Your current workout is: <script> document.write(workout); </script> </h1>
+		<h1> Time Left: </h1>
+		<div class = "t" >
+		<span id = "count"> <script> document.write(getTime()) </script> </span>
+		</div>
+		</br>
+		<button onclick = "start()"> Start Timer </button>	
+		</br>
+		<h2> Example: </br> </br> </h2>	
+		<script> display_image() </script>
+		</br>	
+		<h1> <div id = "setNum"> <script> document.write(getSets()); </script> </div> Remaining Sets </h1>
+		<button onclick = "setNum()">Next Set</button>
+	</div>
+
+</body>
+</html>
