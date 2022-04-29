@@ -34,28 +34,33 @@ form {
 }
 
 .button {
-  background-color: #808080;
-  border: none;
-  color: white;
-  padding: 15px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 12px;
-  margin: 5px;
-}
-
-.dropdown {
-    font-family: "Poppins", sans-serif;
-    background-color: #808080;
+    background-color: #333333;
+    border: none;
     color: white;
-    padding: 8px;
+    padding: 12px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
-    border-radius: 4px;
-    margin: 2px;
+    font-size: 16px;
+    border-radius: 12px;
+    margin: 0px;
+}
+
+select {
+    font-family: "Poppins", sans-serif;
+    background-color: #333333;
+    color: white;
+    padding: 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 8px;
+    margin: 3px;
     cursor: pointer;
+    clear:both;
   }
+
+.slider {
+    accent-color: #333333;
+}
